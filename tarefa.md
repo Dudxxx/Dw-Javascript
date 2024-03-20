@@ -53,3 +53,89 @@ function exemploConst() {
 exemploConst();
 //vai dar erro pois o "n2" é uma constante, e não pode ser alterada. 
 ```
+
+
+# Tipos de Dados:
+
+Os tipos de dados, está ligado ao tipo de variavel que vai ser armazenada, como exemplo em uma `string` será armazenado alguns caracteres, por exemplo: `"Olá, Mundo!!!"`
+
+# Tipos primitivos
+
+Os tipos primitivos no geral, é composto por 5 tipos diferentes, entre eles;
+
+## `boolean`
+O tipo `boolean` recebe o valor verdadeiro e falso, na linguagem de programação `True` ou `False`, facilitando nos momentos que precisamos de um sim ou não para alguma função.
+
+```javascript
+let boolean = true;
+alert(boolean);
+//vai retornar o valor "true" na tela
+```
+
+## `number`
+O tipo `number`, basicamente recebe um numero, podendo ser o numero 1, ou até mesmo o numero -3,14, numeros no geral.
+```javascript
+let number = 1490
+number = number - (number/2)
+alert(number)
+//vai retornar o valor "745"
+```
+
+## `string`
+O tipo `string`, recebe caracteres em sequencia, que forma frases ou coisas do tipo, os numeros de uma string, não recebe o mesmo valor numerico de um tipo `number` apenas é representado
+```javascript
+let string1 = "Olá Mundo!!!";
+let string2 = ", Meu nome é Eduardo";
+let string = string1 + string2
+alert(string)
+//vai retornar a string "Olá Mundo!!!, Meu nome é Eduardo" 
+```
+
+## `undefined`
+O tipo `undefined`, significa que a variavel ainda mnão foi definida, ou melhor, não foi dado nenhum valor a ela.
+```javascript
+let undefined;
+alert(undefined)
+//Não retorna nada, pois ainda não foi dado algum valor. 
+```
+
+## `null`
+O tipo `null`, significa que ela é nula, propositalmente, ou seja, não exerce nenhum valor, é a mesma coisa do zero na matematica, não mudando absolutamente nada.
+```javascript
+let nada = null;
+alert(nada)
+//vai retornar o valor null.
+```
+
+## Objetos
+Existe 3 tipos de objetos diferentes, entre eles:
+
+`array`
+o array pode ser considerado um lista de valores, conhecida como list, em python
+```javascript
+let cardapio = ["strogonoff", "arroz", "feijão", "ovo", "batata"]
+//basicamente cria uma lista com strings dentro, podendo acessar cada uma delas ou todas a qualquer momento
+```
+`object`
+é basicamente um coleção de dados, tendo que ser usada entre chaves
+
+```javascript
+let pessoa1 = {
+  nome: "Eduardo Schimidt",
+  idade: 16,
+  gmail: "schimidteduardo941@gmail.com"
+};
+```
+
+`function`
+basciamente podemos criar um bloco, que executa alguma função, por exemplo baskara, em vez de digitar a equação e aplicala a todo momento, podemos simplesmente criar uma função que faça isso, e quando precisarmos, chamamos ela, colocando apenas os numeros desejados.
+
+```javascript
+function multiplicação(a, b) {
+  if a && b != 0
+    return a*b;
+} else {
+  return "digite valores diferentes de 0"
+}
+//retorna a multiplicação dos dois valores
+```
