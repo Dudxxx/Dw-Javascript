@@ -107,16 +107,16 @@ alert(nada)
 //vai retornar o valor null.
 ```
 
-## Objetos
+# Objetos
 Existe 3 tipos de objetos diferentes, entre eles:
 
-`array`
+## `array`
 o array pode ser considerado um lista de valores, conhecida como list, em python
 ```javascript
 let cardapio = ["strogonoff", "arroz", "feijão", "ovo", "batata"]
 //basicamente cria uma lista com strings dentro, podendo acessar cada uma delas ou todas a qualquer momento
 ```
-`object`
+## `object`
 é basicamente um coleção de dados, tendo que ser usada entre chaves
 
 ```javascript
@@ -127,7 +127,7 @@ let pessoa1 = {
 };
 ```
 
-`function`
+## `function`
 basciamente podemos criar um bloco, que executa alguma função, por exemplo baskara, em vez de digitar a equação e aplicala a todo momento, podemos simplesmente criar uma função que faça isso, e quando precisarmos, chamamos ela, colocando apenas os numeros desejados.
 
 ```javascript
