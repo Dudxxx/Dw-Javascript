@@ -128,7 +128,7 @@ let pessoa1 = {
 ```
 
 ## `function`
-basciamente podemos criar um bloco, que executa alguma função, por exemplo baskara, em vez de digitar a equação e aplicala a todo momento, podemos simplesmente criar uma função que faça isso, e quando precisarmos, chamamos ela, colocando apenas os numeros desejados.
+basciamente podemos criar um bloco, que executa alguma função, por exemplo baskara, em vez de digitar a equação e aplica-lá a todo momento, podemos simplesmente criar uma função que faça isso, e quando precisarmos, chamamos ela, colocando apenas os numeros desejados.
 
 ```javascript
 function multiplicação(a, b) {
@@ -138,4 +138,141 @@ function multiplicação(a, b) {
   return "digite valores diferentes de 0"
 }
 //retorna a multiplicação dos dois valores
+```
+
+# Operadores básicos
+
+Os operadores básicos, são extremamente importantes para qualquer programa a ser feito, pois ajudam absurdamente na logica, os quatro tipos deles são:
+
+## `Aritméticos`
+Os aritméticos são a matematica basica por assim dizer, contendo adição, subtração entre outros
+
+```javascript
+let x = 0
+x = x + 1
+x = x - 1
+x = x * x
+x = x / x
+x = 10 % 3
+
+//contendo a possibilidade de adicionar ou subtrair apenas um
+x++
+x--
+
+```
+## `De Comparação`
+Principalmente usado nos "if" os de comparação fazem justo ao nome, não sendo responsaveis por adicionar ou diminuir uma variavel, apenas comparar com outra variavel ou algo do tipo;
+
+```javascript
+
+    2 == 2 // Verdadeiro, poís os dois são iguais
+    "2" === 2 // falso, pois os dois não são do mesmo tipo, um sendo number e o outro uma string
+    1 != 2 // veradadeiro, pois o 1 é diferente do 2
+    3 > 2 // verdadeiro, pois o 3 é maior que o 2
+    1 < 2 // verdadeiro pois o 1 é menor que o 2
+    3 >= 3 // verdadeiro pois o 3 entra na condição do 3 ser maior ou igual a 3
+    2 <= 3 // verdadeiro pois o dois está dentro das condições, o dois é menor que 3
+```
+## `Lógicos`
+Dentro do python, os operadores logicos são conhecidos como, "and" ou "or";
+
+```javascript
+let x = 10
+let y = 45
+function diferente(a, b) {
+  if (a != 20 && b != 20) {
+    alert("diferente")
+  }
+}
+function ou(a, b) {
+  if (a == 10 || b == 10) {
+    alert("um dos valores são iguais a 10")
+  }
+}
+function not(numero) {
+  return !(numero % 2);
+}
+diferente(x, y)
+ou(x, y)
+console.log(not(2)) // o resto da divisão é 0 então é verdadeiro
+console.log(not(3)) // o resto da divisão é impar então da falso
+
+```
+## `typeof`
+mostra para o usuario o tipo de dado de um valor desejado
+```javascript
+var x = 10
+var string = "Olá Mundo"
+var boolean = new Boolean(false)
+
+console.log(typeof x)
+console.log(typeof string)
+console.log(typeof boolean)
+```
+
+## exemplo com tudo
+```javascript
+// Declaração de variáveis
+const nome = "Eduardo Pinheiro Schimiidt";
+const idade = 16;
+// Exibindo informações na tela
+console.log(`Olá, ${nome}!`);
+console.log(`Você tem ${idade} anos, o que equivale a ${idade * 12} meses.`);
+// Criando e manipulando um array
+const listaDeHobbies = ["Ler", "Jogar videogame", "Praticar esportes"];
+
+// Exibindo a lista de hobbies
+console.log("Seus hobbies são:");
+for (const hobby of listaDeHobbies) {
+  console.log(`--- ${hobby}`);
+}
+
+// Criando e manipulando um objeto
+const filmeFavorito = {
+  titulo: "O Rei Leão",
+  anoLancamento: 1994,
+};
+
+// Exibindo informações do filme favorito
+console.log(`Seu filme favorito é ${filmeFavorito.titulo} (${filmeFavorito.anoLancamento})`);
+
+// Operações matemáticas
+var num1 = 10;
+var num2 = 5;
+var num3 = 25
+
+console.log(`Soma: ${num1} + ${num2} + ${num3} = ${num1 + num2 + num3}`);
+console.log(`Diferença: ${num1} - ${num2} = ${num1 - num2}`);
+console.log(`Produto: ${num1} * ${num2} = ${num1 * num2}`);
+console.log(`Quociente: ${num1} / ${num2} = ${num1 / num2}`);
+
+// Comparações
+const num4 = 15;
+const num5 = 10;
+
+console.log(`${num4} === ${num5}: ${num4 === num5}`); // Igualdade estrita
+console.log(`${num4} !== ${num5}: ${num4 !== num5}`); // Desigualdade estrita
+console.log(`${num4} > ${num5}: ${num4 > num5}`); // Maior que
+console.log(`${num4} < ${num5}: ${num4 < num5}`); // Menor que
+console.log(`${num4} >= ${num5}: ${num4 >= num5}`); // Maior ou igual que
+console.log(`${num4} <= ${num5}: ${num4 <= num5}`); // Menor ou igual que
+
+// Operadores lógicos
+const bool1 = true;
+const bool2 = false;
+
+console.log(`${bool1} && ${bool2}: ${bool1 && bool2}`); // E
+console.log(`${bool1} || ${bool2}: ${bool1 || bool2}`); // Ou
+
+// Operador typeof
+console.log(`typeof nome: ${typeof nome}`); // String
+console.log(`typeof idade: ${typeof idade}`); // Number
+console.log(`typeof eEstudante: ${typeof eEstudante}`); // Boolean
+console.log(`typeof listaDeHobbies: ${typeof listaDeHobbies}`); // Object
+console.log(`typeof filmeFavorito: ${typeof filmeFavorito}`); // Object
+console.log(`typeof num1: ${typeof num1}`); // Number
+console.log(`typeof num2: ${typeof num2}`); // Number
+console.log(`typeof bool1: ${typeof bool1}`); // Boolean
+console.log(`typeof bool2: ${typeof bool2}`); // Boolean
+
 ```
