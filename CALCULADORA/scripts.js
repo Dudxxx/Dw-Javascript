@@ -105,7 +105,7 @@ function executaCalculo(calculadora) {
     case "*":
       resultado = parseFloat(calculadora.operandoAnterior) * parseFloat(calculadora.operandoAtual);
       break;
-    case "/":
+    case "÷":
       resultado = parseFloat(calculadora.operandoAnterior) / parseFloat(calculadora.operandoAtual);
       break;
     default:
