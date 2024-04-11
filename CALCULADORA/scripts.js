@@ -125,7 +125,6 @@ function apagaDigito(calculadora) {
   atualizaDisplay(calculadora);
 }
 
-//operações matematicas
 
 
 atualizaDisplay(calculadora)
