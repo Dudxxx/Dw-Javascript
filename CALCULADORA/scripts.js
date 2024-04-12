@@ -34,6 +34,7 @@ btnDelete.addEventListener("click", () => {
 // Botão de igual
 btnIgual.addEventListener("click", () => {
   executaCalculo(calculadora);
+  calculadora.operador = "="
 });
 
 // Botões dos números
@@ -79,6 +80,7 @@ function escolheOperador(calculadora, operador) {
   if (calculadora.operandoAtual === "") return;
 
   if (calculadora.operandoAnterior !== "") {
+    
     executaCalculo(calculadora);
   }
 
@@ -109,13 +111,18 @@ function executaCalculo(calculadora) {
       resultado = "Operador inválido";
   }
 
-  calculadora.operandoAnterior = resultado;
+
+  calculadora.operandoAnterior = "";
+  calculadora.operandoAtual = resultado.toString()
+  calculadora.operador = ""
+
 
   atualizaDisplay(calculadora);
 }
 
 // Função para apagar o último dígito
 function apagaDigito(calculadora) {
+  if (calculadora.operador === "=") return
   calculadora.operandoAtual = calculadora.operandoAtual.slice(0, -1);
   atualizaDisplay(calculadora);
 }
