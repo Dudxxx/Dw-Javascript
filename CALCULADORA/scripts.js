@@ -70,7 +70,6 @@ function limpaVariaveis(calculadora) {
 
 // Função para adicionar um número ao operandoAtual
 function adicionaNumero(calculadora, numero) {
-  if (numero === "." && calculadora.operandoAtual.includes(".")) return;
   calculadora.operandoAtual += numero;
   atualizaDisplay(calculadora);
 }
@@ -91,8 +90,6 @@ function escolheOperador(calculadora, operador) {
 
 // Função para executar o cálculo
 function executaCalculo(calculadora) {
-  if (calculadora.operandoAtual === "" || calculadora.operandoAnterior === "") return;
-
   let resultado;
 
   switch (calculadora.operador) {
@@ -102,7 +99,7 @@ function executaCalculo(calculadora) {
     case "-":
       resultado = parseFloat(calculadora.operandoAnterior) - parseFloat(calculadora.operandoAtual);
       break;
-    case "*":
+    case "x":
       resultado = parseFloat(calculadora.operandoAnterior) * parseFloat(calculadora.operandoAtual);
       break;
     case "÷":
@@ -112,19 +109,15 @@ function executaCalculo(calculadora) {
       resultado = "Operador inválido";
   }
 
-  calculadora.operandoAnterior = resultado.toString();
-  calculadora.operandoAtual = "";
-  calculadora.operador = "";
+  calculadora.operandoAnterior = resultado;
+
   atualizaDisplay(calculadora);
 }
 
 // Função para apagar o último dígito
 function apagaDigito(calculadora) {
-  if (calculadora.operandoAtual === "") return;
   calculadora.operandoAtual = calculadora.operandoAtual.slice(0, -1);
   atualizaDisplay(calculadora);
 }
-
-
 
 atualizaDisplay(calculadora)
