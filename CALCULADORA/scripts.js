@@ -22,6 +22,23 @@ const calculadora = {
 ******************************************************/
 
 // Botão AC
+document.addEventListener("keydown", (evento) => {
+  let teclapress = evento.key
+  let numeros = "0123456789."
+  let op = "*+-÷/"
+  if (numeros.includes(teclapress)) {
+    adicionaNumero(calculadora, teclapress)
+  } else if (op.includes(teclapress)){
+    escolheOperador(calculadora, teclapress == "/" ? "÷": teclapress)
+  }else if (teclapress == "Enter") {
+    executaCalculo(calculadora)
+  }else if (teclapress == "Escape"){
+    limpaVariaveis(calculadora)
+  }else if (teclapress == "Backspace") {
+    apagaDigito(calculadora)
+  }
+});
+
 btnAC.addEventListener("click", () => {
   limpaVariaveis(calculadora);
 });
@@ -92,6 +109,10 @@ function escolheOperador(calculadora, operador) {
 
 // Função para executar o cálculo
 function executaCalculo(calculadora) {
+  //if (isNaN(calculadora.operandoAnterior)) return
+  //if (isNaN(calculadora.operandoAtual)) return
+  //if (calculadora.operador == "") return
+
   let resultado;
 
   switch (calculadora.operador) {
