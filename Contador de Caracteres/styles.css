@@ -24,13 +24,13 @@ body {
 }
 
 #text {
-    margin-right: 14vw;
+    margin-right: 21vw;
 }
 
 #btn-contar {
     background-color: rgb(105, 34, 197);
     width: 8vw;
-    height: 3vh;
+    height: 6vh;
     border: none;
     border-radius: 4px;
     color: white;
