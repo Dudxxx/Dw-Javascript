@@ -1,0 +1,45 @@
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    background: linear-gradient(rgb(105, 34, 197),rgb(108, 11, 187));
+    background-repeat: no-repeat;
+}
+.container {
+
+    background: white;
+    width: 35%;
+    height: 40%;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+
+}
+
+#input {
+    width: 20vw;
+    height: 12vh;
+}
+
+#text {
+    margin-right: 14vw;
+}
+
+#btn-contar {
+    background-color: rgb(105, 34, 197);
+    width: 8vw;
+    height: 3vh;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 15px;
+}
+
+.contador {
+    color: rgb(150, 147, 145);
+}
+
+h1 {
+    color: rgb(105, 34, 197);
+}
