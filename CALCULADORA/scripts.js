@@ -22,6 +22,23 @@ const calculadora = {
 ******************************************************/
 
 // Botão AC
+document.addEventListener("keydown", (evento) => {
+  let teclapress = evento.key
+  let numeros = "0123456789."
+  let op = "*+-÷/"
+  if (numeros.includes(teclapress)) {
+    adicionaNumero(calculadora, teclapress)
+  } else if (op.includes(teclapress)){
+    escolheOperador(calculadora, teclapress == "/" ? "÷": teclapress)
+  }else if (teclapress == "Enter") {
+    executaCalculo(calculadora)
+  }else if (teclapress == "Escape"){
+    limpaVariaveis(calculadora)
+  }else if (teclapress == "Backspace") {
+    apagaDigito(calculadora)
+  }
+});
+
 btnAC.addEventListener("click", () => {
   limpaVariaveis(calculadora);
 });
@@ -34,6 +51,7 @@ btnDelete.addEventListener("click", () => {
 // Botão de igual
 btnIgual.addEventListener("click", () => {
   executaCalculo(calculadora);
+  calculadora.operador = "="
 });
 
 // Botões dos números
@@ -70,7 +88,6 @@ function limpaVariaveis(calculadora) {
 
 // Função para adicionar um número ao operandoAtual
 function adicionaNumero(calculadora, numero) {
-  if (numero === "." && calculadora.operandoAtual.includes(".")) return;
   calculadora.operandoAtual += numero;
   atualizaDisplay(calculadora);
 }
@@ -80,6 +97,7 @@ function escolheOperador(calculadora, operador) {
   if (calculadora.operandoAtual === "") return;
 
   if (calculadora.operandoAnterior !== "") {
+    
     executaCalculo(calculadora);
   }
 
@@ -91,7 +109,9 @@ function escolheOperador(calculadora, operador) {
 
 // Função para executar o cálculo
 function executaCalculo(calculadora) {
-  if (calculadora.operandoAtual === "" || calculadora.operandoAnterior === "") return;
+  //if (isNaN(calculadora.operandoAnterior)) return
+  //if (isNaN(calculadora.operandoAtual)) return
+  //if (calculadora.operador == "") return
 
   let resultado;
 
@@ -102,7 +122,7 @@ function executaCalculo(calculadora) {
     case "-":
       resultado = parseFloat(calculadora.operandoAnterior) - parseFloat(calculadora.operandoAtual);
       break;
-    case "*":
+    case "x":
       resultado = parseFloat(calculadora.operandoAnterior) * parseFloat(calculadora.operandoAtual);
       break;
     case "÷":
@@ -112,19 +132,20 @@ function executaCalculo(calculadora) {
       resultado = "Operador inválido";
   }
 
-  calculadora.operandoAnterior = resultado.toString();
-  calculadora.operandoAtual = "";
-  calculadora.operador = "";
+
+  calculadora.operandoAnterior = "";
+  calculadora.operandoAtual = resultado.toString()
+  calculadora.operador = ""
+
+
   atualizaDisplay(calculadora);
 }
 
 // Função para apagar o último dígito
 function apagaDigito(calculadora) {
-  if (calculadora.operandoAtual === "") return;
+  if (calculadora.operador === "=") return
   calculadora.operandoAtual = calculadora.operandoAtual.slice(0, -1);
   atualizaDisplay(calculadora);
 }
-
-
 
 atualizaDisplay(calculadora)
