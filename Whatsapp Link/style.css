@@ -1,0 +1,32 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: green;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+    width: 25vw;
+    height: 25vh;
+    border: 1px black solid;
+}
+
+h1 {
+    width: 19vw;
+}
+button {
+    align-items: center;
+    text-align: center;
+    width: 2.5vw;
+    height: 3.7vh;
+}
+
+#telefone {
+    width: 9vw;
+    height: 3vh;
+}
