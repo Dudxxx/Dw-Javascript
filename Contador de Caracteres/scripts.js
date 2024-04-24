@@ -12,7 +12,7 @@ function palavras() {
             divContador.innerText = String(inputTexto.value).length + " caracteres"
             break;
         default:
-            divContador.innerText = String(inputTexto.value).trim().split(/\s+/).length + " Palavras"
+            divContador.innerText = String(inputTexto.value).trim(-1).split(/\s+/).length + " Palavras"
             break;
     }
 }
