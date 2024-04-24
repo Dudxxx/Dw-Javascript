@@ -20,11 +20,11 @@ function palavras() {
 function mudaBtn() {
     switch (btnContar.innerText) {
         case "Contar Caracteres":
-            btnContar.innerHTML = "Contar Palavras"
+            btnContar.innerText = "Contar Palavras"
             palavras()
             break;
         default:
-            btnContar.innerHTML = "Contar Caracteres"
+            btnContar.innerText = "Contar Caracteres"
             palavras()
     }
 }
