@@ -5,7 +5,7 @@ body {
 .container {
     width: 100vw;
     height: 100vh;
-    background: green;
+    background: rgb(47, 168, 47);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -16,6 +16,7 @@ input {
     border-radius: 10px;
     border: 0.2px black solid;
 }
+
 .box {
     display: flex;
     flex-wrap: wrap;
@@ -34,30 +35,26 @@ h1 {
     margin-top: -40px;
     margin-bottom: 40px;
 }
+
 button {
     align-items: center;
     text-align: center;
-    width: 4vw;
-    height: 8vh;
-    background-color: green;
-  
+    width: 3.5vw;
+    height: 6vh;
+    background-color: rgb(47, 168, 47);
     border-radius: 4px;
-
 }
-
-
 
 #telefone {
     width: 15vw;
-    height: 7vh;
+    height: 5.7vh;
 }
-
 
 #container_exibir {
     display: none;
     margin-top: 20px;
-
 }
+
 #linktela {
     text-align: left;
     user-select: none;
@@ -65,4 +62,45 @@ button {
     border: 0.2px black solid;
     width: 23.4vw;
     height: 2vh;
+}
+
+p {
+    cursor: default;
+}
+
+#copiarLink:hover {
+    color: rgb(47, 168, 47);
+}
+
+/* Media query para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .box {
+        width: 80vw;
+        height: 50vh;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-top: -30px;
+        margin-bottom: 30px;
+    }
+
+    button {
+        width: 50%;
+        height: 40px;
+    }
+
+    #telefone {
+        width: 70%;
+        height: 40px;
+    }
+
+    #linktela {
+        width: 70%;
+        height: 30px;
+    }
 }
