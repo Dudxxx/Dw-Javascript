@@ -60,7 +60,7 @@ button {
     user-select: none;
     border-radius: 5px;
     border: 0.2px black solid;
-    width: 23.4vw;
+    width: 22.5vw;
     height: 2vh;
 }
 
@@ -70,6 +70,10 @@ p {
 
 #copiarLink:hover {
     color: rgb(47, 168, 47);
+}
+
+svg {
+    color: white;
 }
 
 /* Media query para dispositivos móveis */
@@ -90,17 +94,22 @@ p {
     }
 
     button {
-        width: 50%;
+        width: 40%;
         height: 40px;
     }
 
     #telefone {
-        width: 70%;
+        width: 80%;
         height: 40px;
+        margin-bottom: 10px;
     }
 
     #linktela {
-        width: 70%;
+        width: 100%;
         height: 30px;
+    }
+
+    svg {
+        color: white;
     }
 }

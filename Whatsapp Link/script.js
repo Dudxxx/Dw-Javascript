@@ -12,10 +12,15 @@ telefone.addEventListener("input", ()=>{
   // Limpa todos os caracteres que não são dígitos
   let numeroTelefone = telefone.value.replace(/\D/g, "").substring(0,11);
 
-  if (numeroTelefone.length > 0) {
-    let telefoneFormatado = `(${numeroTelefone.substring(0, 2)})${numeroTelefone.substring(2, 7)}-${numeroTelefone.substring(7, 11)}`;
-    telefone.value = telefoneFormatado;
-  }
+  if (!/^\d+$/.test(numeroTelefone)) {
+    telefone.value = ""; // Limpa o valor do campo se não contiver apenas números
+} else {
+    // Formata o número de telefone (caso necessário)
+    if (numeroTelefone.length > 0) {
+        let telefoneFormatado = `(${numeroTelefone.substring(0, 2)})${numeroTelefone.substring(2, 7)}-${numeroTelefone.substring(7, 11)}`;
+        telefone.value = telefoneFormatado;
+    }
+}
   
 });
 
@@ -54,7 +59,7 @@ mostrarLink.addEventListener("click", () => {
       texto.textContent = url_final;
       
 
-
+      container.style.display = "none";
       if(container.style.display === "none"){
         container.style.display = "block";
       }else {
