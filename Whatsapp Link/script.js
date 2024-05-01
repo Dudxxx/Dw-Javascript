@@ -11,7 +11,7 @@ var copiarlink = document.querySelector("#copiarLink")
 telefone.addEventListener("input", ()=>{
   // Limpa todos os caracteres que não são dígitos
   let numeroTelefone = telefone.value.replace(/\D/g, "").substring(0,11);
-
+  
   if (!/^\d+$/.test(numeroTelefone)) {
     telefone.value = ""; // Limpa o valor do campo se não contiver apenas números
 } else {
@@ -22,9 +22,14 @@ telefone.addEventListener("input", ()=>{
     }
     if(telefone.value.length === 14) {
       telefone.style.background = "rgb(47, 168, 47)"
+    }else {
+      telefone.style.background = "white"
     }
+    
 }
-  
+telefone.addEventListener("click", () => {
+  container.style.display = "none"
+})
 });
 
 gerarLink.addEventListener("click", () => {
@@ -75,10 +80,9 @@ mostrarLink.addEventListener("click", () => {
 }) 
 
 copiarlink.addEventListener("click", () => {
-  console.log(texto)
-  const textocopia = texto.textContent
-  navigator.clipboard.writeText(textocopia).then
-  copiarlink.textContent = "Link copiado para área de transferência!"
-  copiarlink.style.color = "black"
-
+  const textocopia = texto.textContent;
+    navigator.clipboard.writeText(textocopia).then(() => {
+        copiarlink.textContent = "Link copiado para área de transferência!";
+        copiarlink.style.color = "black";
+    });
 })
