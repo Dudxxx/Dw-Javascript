@@ -20,6 +20,9 @@ telefone.addEventListener("input", ()=>{
         let telefoneFormatado = `(${numeroTelefone.substring(0, 2)})${numeroTelefone.substring(2, 7)}-${numeroTelefone.substring(7, 11)}`;
         telefone.value = telefoneFormatado;
     }
+    if(telefone.value.length === 14) {
+      telefone.style.background = "rgb(47, 168, 47)"
+    }
 }
   
 });
