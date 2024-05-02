@@ -76,6 +76,7 @@ svg {
     color: white;
 }
 
+
 /* Media query para dispositivos móveis */
 @media only screen and (max-width: 768px) {
     .container {
