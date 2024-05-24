@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="container">
+
+    </div>
+
+    <script>
+        let divContainer = document.querySelector("#container")
+        console.log("1")
+        fetch("info.txt")
+            .then(resposta => resposta.text())
+            .then(texto => divContainer.innerHTML = texto)
+
+
+        console.log("2")
+        console.log("3")
+
+
+    </script>
+    
+</body>
+</html>
