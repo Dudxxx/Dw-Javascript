@@ -3,7 +3,7 @@ body {
     margin: 0px;
 }
 
-.container {
+.topo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,4 +14,84 @@ body {
 
 #img {
     width: 10vw;
+}
+
+.container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    height: 800px;
+    background-color: #1A1A1A;
+    flex-wrap: wrap;
+}
+
+#status {
+    display: flex;
+    width: 750px;
+    height: 10px;
+    justify-content: space-between;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    border: none;
+    width: 638px;
+    height: 54px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: #1E6F9F;
+    width: 90px;
+    height: 56px;
+}
+
+#tc {
+    color: #4EA8DE;
+}
+
+#cc {
+    color: #8284FA;
+}
+
+.central {
+    text-align: center;
+    width: 750px;
+    margin-bottom: 15vw;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.task {
+    background-color: #262626;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task.complete {
+    text-decoration: line-through;
+    color: #828282;
+}
+
+@keyframes slide-out {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

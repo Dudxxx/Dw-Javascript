@@ -3,13 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo</title>
+    <title>Todo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="topo">
         <div class="img"><img src="imagens/Logo.png" alt="" id="img"></div>
-        
     </div>
+    <div class="input">
+        <input id="criar" type="text" placeholder="Adicione uma nova tarefa">
+        <button id="btn">Criar +</button>
+    </div>
+    
+    <div class="container">
+        <div id="status">
+            <h2 id="tc">Tarefas Criadas</h2>
+            <h2 id="cc">Concluídas</h2>
+        </div>
+        <div class="break"></div>
+        <div class="central">
+            <div id="placeholder">
+                <img src="imagens/Clipboard.png" alt="" width="56px" id="clipboard">
+                <div class="break"></div>
+                <img src="imagens/Você ainda não tem tarefas cadastradas Crie tarefas e organize seus itens a fazer.png" alt="" width="688px" id="no-tasks">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
