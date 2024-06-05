@@ -1,6 +1,7 @@
 body {
     background-color: #1A1A1A;
     margin: 0px;
+    font-family: sans-serif
 }
 
 .topo {
@@ -36,6 +37,7 @@ body {
 .input {
     display: flex;
     justify-content: center;
+    transform: translateY(-50%);
 }
 
 input {
@@ -95,3 +97,5 @@ button {
         transform: translateX(0);
     }
 }
+
+
